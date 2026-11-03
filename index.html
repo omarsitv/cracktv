@@ -1,1 +1,553 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Crack En Servicios Online | Internet, TV Digital y Radio Streaming</title>
+<meta name="description" content="Internet ilimitada, TV digital y radios online en streaming. Sin pagar de más. Solicitá tu prueba gratis.">
+<style>
+  :root{
+    --bg-1:#0b0f2a;
+    --bg-2:#1a0b3d;
+    --accent:#00e0ff;
+    --accent-2:#b14bff;
+    --text:#f4f6ff;
+    --muted:#b7bcd6;
+    --glass:rgba(255,255,255,0.07);
+    --glass-border:rgba(255,255,255,0.15);
+    --whatsapp:#25D366;
+  }
+  *{box-sizing:border-box;margin:0;padding:0}
+  html{scroll-behavior:smooth}
+  body{
+    font-family:'Segoe UI',system-ui,-apple-system,sans-serif;
+    color:var(--text);
+    background:radial-gradient(1200px 800px at 10% -10%, #2a0f6b 0%, transparent 60%),
+               radial-gradient(900px 600px at 100% 0%, #004e7a 0%, transparent 55%),
+               linear-gradient(180deg,var(--bg-1),var(--bg-2));
+    min-height:100vh;
+    overflow-x:hidden;
+    line-height:1.55;
+  }
+  a{color:inherit;text-decoration:none}
+  img{max-width:100%;display:block}
 
+  /* NAV */
+  .nav{
+    position:sticky;top:0;z-index:50;
+    backdrop-filter:blur(14px);
+    background:rgba(11,15,42,0.55);
+    border-bottom:1px solid var(--glass-border);
+  }
+  .nav-inner{
+    max-width:1200px;margin:0 auto;padding:14px 20px;
+    display:flex;align-items:center;justify-content:space-between;gap:16px;
+  }
+  .logo{display:flex;align-items:center;gap:10px;font-weight:800;letter-spacing:.5px}
+  .logo-mark{
+    width:38px;height:38px;border-radius:10px;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    display:grid;place-items:center;
+    box-shadow:0 8px 24px rgba(0,224,255,.35);
+  }
+  .logo-mark svg{width:22px;height:22px}
+  .logo span b{background:linear-gradient(90deg,var(--accent),var(--accent-2));-webkit-background-clip:text;background-clip:text;color:transparent}
+  .nav-links{display:flex;gap:22px}
+  .nav-links a{color:var(--muted);font-size:14px;transition:.2s}
+  .nav-links a:hover{color:var(--accent)}
+  @media(max-width:720px){.nav-links{display:none}}
+
+  /* HERO */
+  .hero{
+    max-width:1200px;margin:0 auto;padding:70px 20px 40px;
+    display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;
+  }
+  .hero h1{
+    font-size:clamp(2rem,5vw,3.4rem);
+    line-height:1.1;margin-bottom:18px;
+  }
+  .hero h1 .grad{
+    background:linear-gradient(90deg,var(--accent),var(--accent-2));
+    -webkit-background-clip:text;background-clip:text;color:transparent;
+  }
+  .hero p{color:var(--muted);font-size:1.05rem;margin-bottom:26px;max-width:520px}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+  .btn{
+    display:inline-flex;align-items:center;gap:10px;
+    padding:14px 22px;border-radius:999px;font-weight:700;font-size:15px;
+    transition:transform .2s, box-shadow .2s, background .2s;
+    cursor:pointer;border:none;
+  }
+  .btn-primary{
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    color:#0b0f2a;
+    box-shadow:0 10px 30px rgba(177,75,255,.35);
+  }
+  .btn-primary:hover{transform:translateY(-2px);box-shadow:0 14px 36px rgba(177,75,255,.5)}
+  .btn-wa{background:var(--whatsapp);color:#fff;box-shadow:0 10px 26px rgba(37,211,102,.35)}
+  .btn-wa:hover{transform:translateY(-2px);background:#1fbf5a}
+  .btn-ghost{background:var(--glass);color:var(--text);border:1px solid var(--glass-border)}
+  .btn-ghost:hover{background:rgba(255,255,255,.12)}
+
+  /* Hero visual */
+  .hero-visual{
+    position:relative;aspect-ratio:1/1;max-width:460px;justify-self:center;width:100%;
+  }
+  .orb{
+    position:absolute;inset:0;border-radius:50%;
+    background:conic-gradient(from 0deg,var(--accent),var(--accent-2),var(--accent));
+    filter:blur(40px);opacity:.55;animation:spin 18s linear infinite;
+
+WhatsApp.com (https://wa.me/5491134220329?text=Hola!%20Quiero%20m%C3%A1s%20info%20sobre%20los%20servicios)
+Share on WhatsApp
+WhatsApp Messenger: More than 2 billion people
+          in over 180 countries use WhatsApp to stay in touch with friends and...
+          family, anytime and anywhere. WhatsApp is free and offers simple, secure,
+          reliable messaging and calling, available on phones all over the world.
+    }
+  .orb-2{
+    position:absolute;inset:15%;border-radius:50%;
+    background:radial-gradient(circle at 30% 30%, #fff3, transparent 60%),
+               linear-gradient(135deg,#1a0b3d,#0b0f2a);
+    border:1px solid var(--glass-border);
+    display:grid;place-items:center;
+    box-shadow:inset 0 0 40px rgba(0,224,255,.15), 0 20px 60px rgba(0,0,0,.5);
+  }
+  .orb-2 svg{width:40%;height:40%;filter:drop-shadow(0 0 18px var(--accent))}
+  @keyframes spin{to{transform:rotate(360deg)}}
+  @media(max-width:860px){
+    .hero{grid-template-columns:1fr;padding-top:40px;text-align:center}
+    .hero p{margin-left:auto;margin-right:auto}
+    .cta-row{justify-content:center}
+    .hero-visual{max-width:320px}
+  }
+
+  /* SECTIONS */
+  section{padding:70px 20px;max-width:1200px;margin:0 auto}
+  .section-title{text-align:center;margin-bottom:40px}
+  .section-title h2{font-size:clamp(1.6rem,3.5vw,2.4rem);margin-bottom:10px}
+  .section-title p{color:var(--muted);max-width:600px;margin:0 auto}
+  .eyebrow{
+    display:inline-block;padding:6px 14px;border-radius:999px;
+    background:var(--glass);border:1px solid var(--glass-border);
+    font-size:12px;letter-spacing:2px;text-transform:uppercase;color:var(--accent);
+    margin-bottom:14px;
+  }
+
+  /* SERVICES */
+  .services{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{
+    background:var(--glass);border:1px solid var(--glass-border);
+    border-radius:20px;padding:28px;
+    backdrop-filter:blur(10px);
+    transition:transform .3s, border-color .3s, box-shadow .3s;
+    position:relative;overflow:hidden;
+  }
+  .card::before{
+    content:"";position:absolute;inset:-1px;border-radius:20px;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    opacity:0;transition:opacity .3s;z-index:-1;
+  }
+  .card:hover{transform:translateY(-6px);border-color:transparent;box-shadow:0 20px 50px rgba(0,224,255,.15)}
+  .card:hover::before{opacity:1}
+  .card:hover .card-inner{background:linear-gradient(180deg,rgba(11,15,42,.9),rgba(26,11,61,.9))}
+  .card-inner{position:relative;border-radius:19px;padding:2px}
+  .icon-wrap{
+    width:58px;height:58px;border-radius:16px;
+    background:linear-gradient(135deg,rgba(0,224,255,.2),rgba(177,75,255,.2));
+    display:grid;place-items:center;margin-bottom:18px;
+    border:1px solid var(--glass-border);
+  }
+  .icon-wrap svg{width:28px;height:28px;color:var(--accent)}
+  .card h3{font-size:1.25rem;margin-bottom:10px}
+  .card p{color:var(--muted);font-size:.95rem;margin-bottom:14px}
+  .card ul{list-style:none;font-size:.9rem;color:var(--muted)}
+  .card ul li{padding:4px 0;display:flex;gap:8px;align-items:flex-start}
+  .card ul li::before{content:"✓";color:var(--accent);font-weight:700}
+  @media(max-width:860px){.services{grid-template-columns:1fr}}
+
+  /* RADIO PLAYER */
+  .player-section{
+    background:linear-gradient(135deg,rgba(0,224,255,.08),rgba(177,75,255,.08));
+    border:1px solid var(--glass-border);border-radius:28px;
+    padding:40px;margin-top:30px;
+    backdrop-filter:blur(14px);
+  }
+  .player{
+    display:grid;grid-template-columns:auto 1fr auto;gap:24px;align-items:center;
+  }
+  .cover{
+    width:110px;height:110px;border-radius:22px;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    display:grid;place-items:center;position:relative;overflow:hidden;
+    box-shadow:0 14px 40px rgba(177,75,255,.4);
+  }
+  .cover::after{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(circle at 30% 30%, #fff4, transparent 60%);
+  }
+  .cover.playing svg{animation:pulse 1.5s ease-in-out infinite}
+  .cover svg{width:50%;height:50%;color:#fff;position:relative;z-index:1}
+  @keyframes pulse{
+    0%,100%{transform:scale(1)}
+    50%{transform:scale(1.1)}
+  }
+  .player-info h3{font-size:1.3rem;margin-bottom:4px}
+  .player-info .station{color:var(--accent);font-size:.9rem;letter-spacing:1px;text-transform:uppercase;margin-bottom:8px}
+  .player-info .status{color:var(--muted);font-size:.85rem;display:flex;align-items:center;gap:8px}
+  .dot{width:8px;height:8px;border-radius:50%;background:#ff4d4d}
+  .dot.live{background:#25D366;box-shadow:0 0 10px #25D366;animation:blink 1.5s infinite}
+  @keyframes blink{50%{opacity:.4}}
+
+  /* Visualizer */
+  .visualizer{display:flex;align-items:flex-end;gap:3px;height:40px;margin-top:10px}
+  .bar{width:4px;background:linear-gradient(180deg,var(--accent),var(--accent-2));border-radius:2px;height:20%;transition:height .15s}
+  .visualizer.active .bar{animation:wave 1s ease-in-out infinite}
+  .visualizer.active .bar:nth-child(1){animation-delay:0s}
+  .visualizer.active .bar:nth-child(2){animation-delay:.1s}
+  .visualizer.active .bar:nth-child(3){animation-delay:.2s}
+  .visualizer.active .bar:nth-child(4){animation-delay:.3s}
+  .visualizer.active .bar:nth-child(5){animation-delay:.4s}
+  .visualizer.active .bar:nth-child(6){animation-delay:.3s}
+  .visualizer.active .bar:nth-child(7){animation-delay:.2s}
+  .visualizer.active .bar:nth-child(8){animation-delay:.1s}
+  @keyframes wave{
+    0%,100%{height:20%}
+    50%{height:100%}
+  }
+
+  .play-btn{
+    width:72px;height:72px;border-radius:50%;border:none;cursor:pointer;
+    background:linear-gradient(135deg,var(--accent),var(--accent-2));
+    display:grid;place-items:center;
+    box-shadow:0 10px 30px rgba(0,224,255,.4);
+    transition:transform .2s;
+  }
+  .play-btn:hover{transform:scale(1.08)}
+  .play-btn svg{width:28px;height:28px;color:#0b0f2a}
+  .volume{display:flex;align-items:center;gap:10px;margin-top:14px}
+  .volume input[type=range]{
+    -webkit-appearance:none;appearance:none;
+    width:140px;height:4px;border-radius:4px;
+    background:rgba(255,255,255,.15);outline:none;
+  }
+  .volume input[type=range]::-webkit-slider-thumb{
+    -webkit-appearance:none;appearance:none;
+    width:14px;height:14px;border-radius:50%;
+    background:var(--accent);cursor:pointer;
+    box-shadow:0 0 10px var(--accent);
+  }
+  .volume input[type=range]::-moz-range-thumb{
+    width:14px;height:14px;border-radius:50%;border:none;
+    background:var(--accent);cursor:pointer;
+  }
+  @media(max-width:720px){
+    .player{grid-template-columns:1fr;text-align:center;gap:18px}
+    .cover{margin:0 auto}
+    .visualizer{justify-content:center}
+    .volume{justify-content:center}
+    .play-btn{margin:0 auto}
+  }
+
+  /* CTA SECTION */
+  .cta-box{
+    text-align:center;padding:60px 30px;border-radius:28px;
+    background:linear-gradient(135deg,rgba(0,224,255,.15),rgba(177,75,255,.15));
+    border:1px solid var(--glass-border);
+    position:relative;overflow:hidden;
+  }
+  .cta-box::before{
+    content:"";position:absolute;inset:0;
+    background:radial-gradient(600px 300px at 50% 0%, rgba(0,224,255,.2), transparent 60%);
+  }
+  .cta-box > *{position:relative;z-index:1}
+  .cta-box h2{font-size:clamp(1.6rem,3.5vw,2.4rem);margin-bottom:14px}
+  .cta-box p{color:var(--muted);margin-bottom:26px;max-width:560px;margin-left:auto;margin-right:auto}
+
+  /* FOOTER */
+  footer{
+    border-top:1px solid var(--glass-border);
+    padding:30px 20px;text-align:center;color:var(--muted);font-size:.9rem;
+  }
+  footer a{color:var(--accent)}
+
+  /* Floating WhatsApp */
+  .wa-float{
+    position:fixed;bottom:22px;right:22px;z-index:100;
+    width:60px;height:60px;border-radius:50%;
+    background:var(--whatsapp);display:grid;place-items:center;
+    box-shadow:0 10px 30px rgba(37,211,102,.5);
+    transition:transform .2s;
+    animation:float 3s ease-in-out infinite;
+  }
+  .wa-float:hover{transform:scale(1.1)}
+  .wa-float svg{width:32px;height:32px;color:#fff}
+  @keyframes float{
+    0%,100%{transform:translateY(0)}
+    50%{transform:translateY(-6px)}
+  }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <div class="nav-inner">
+    <div class="logo">
+      <div class="logo-mark">
+        <svg viewBox="0 0 24 24" fill="none" stroke="#0b0f2a" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+          <polygon points="5 3 19 12 5 21 5 3"/>
+        </svg>
+      </div>
+      <span>Crack En <b>Servicios Online</b></span>
+    </div>
+    <div class="nav-links">
+      <a href="#servicios">Servicios</a>
+      <a href="#radio">Radio en vivo</a>
+      <a href="#prueba">Solicitá tu prueba</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<header class="hero">
+  <div>
+    <span class="eyebrow">🚀 Entretenimiento sin límites</span>
+    <h1>Internet ilimitada, TV digital y <span class="grad">radio en streaming</span> al mejor precio.</h1>
+    <p>En <b>Crack En Servicios Online</b> te damos todo lo que necesitás para disfrutar en casa: conexión estable, canales en HD y tus radios favoritas en vivo. <b>Sin pagar de más.</b></p>
+    <div class="cta-row">
+      <a class="btn btn-wa" href="https://wa.me/5491134220329?text=Hola!%20Quiero%20más%20info%20sobre%20los%20servicios" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.94 11.94 0 0012.04 0C5.5 0 .2 5.3.2 11.84c0 2.09.55 4.13 1.6 5.93L0 24l6.4-1.68a11.86 11.86 0 005.64 1.44h.01c6.54 0 11.84-5.3 11.84-11.84 0-3.16-1.23-6.14-3.37-8.44zM12.04 21.6h-.01a9.78 9.78 0 01-4.98-1.36l-.36-.21-3.8 1 1.01-3.7-.23-.38a9.8 9.8 0 01-1.5-5.11c0-5.42 4.41-9.83 9.84-9.83 2.63 0 5.1 1.02 6.96 2.88a9.77 9.77 0 012.88 6.96c0 5.42-4.41 9.83-9.81 9.83zm5.38-7.35c-.3-.15-1.76-.87-2.03-.97-.27-.1-.47-.15-.67.15-.2.3-.77.97-.94 1.17-.17.2-.35.22-.65.07-.3-.15-1.25-.46-2.38-1.47-.88-.78-1.47-1.75-1.64-2.05-.17-.3-.02-.46.13-.6.13-.13.3-.35.45-.52.15-.17.2-.3.3-.5.1-.2.05-.37-.02-.52-.07-.15-.67-1.62-.92-2.22-.24-.58-.49-.5-.67-.51l-.57-.01c-.2 0-.52.07-.79.37-.27.3-1.04 1.02-1.04 2.48 0 1.46 1.07 2.88 1.22 3.08.15.2 2.1 3.2 5.08 4.49.71.3 1.26.48 1.69.62.71.22 1.36.19 1.87.12.57-.08 1.76-.72 2-1.41.25-.7.25-1.29.17-1.41-.07-.12-.27-.2-.57-.35z"/></svg>
+        Escribinos por WhatsApp
+      </a>
+      <a class="btn btn-ghost" href="#prueba">Solicitar prueba gratis</a>
+    </div>
+  </div>
+  <div class="hero-visual">
+    <div class="orb"></div>
+    <div class="orb-2">
+      <svg viewBox="0 0 24 24" fill="none" stroke="url(#g1)" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+        <defs>
+          <linearGradient id="g1" x1="0" x2="1" y1="0" y2="1">
+            <stop offset="0" stop-color="#00e0ff"/>
+            <stop offset="1" stop-color="#b14bff"/>
+          </linearGradient>
+        </defs>
+        <rect x="2" y="4" width="20" height="14" rx="2"/>
+        <path d="M8 21h8M12 18v3"/>
+        <path d="M7 9l3 3-3 3M13 13h4"/>
+      </svg>
+    </div>
+  </div>
+</header>
+
+<!-- SERVICIOS -->
+<section id="servicios">
+  <div class="section-title">
+    <span class="eyebrow">Nuestros servicios</span>
+    <h2>Todo lo que necesitás, en un solo lugar</h2>
+    <p>Soluciones pensadas para que disfrutes al máximo sin sorpresas en la factura.</p>
+  </div>
+  <div class="services">
+    <div class="card">
+      <div class="card-inner">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M5 12.55a11 11 0 0 1 14 0"/>
+            <path d="M1.42 9a16 16 0 0 1 21.16 0"/>
+            <path d="M8.53 16.11a6 6 0 0 1 6.95 0"/>
+            <line x1="12" y1="20" x2="12.01" y2="20"/>
+          </svg>
+        </div>
+        <h3>Internet Ilimitada</h3>
+        <p>Navegá, trabajá, jugá y mirá streaming sin límites ni cortes.</p>
+        <ul>
+          <li>Conexión estable y de alta velocidad</li>
+          <li>Sin topes de consumo</li>
+          <li>Ideal para hogares y oficinas</li>
+        </ul>
+      </div>
+    </div>
+
+WhatsApp.com (https://wa.me/5491134220329?text=Hola!%20Quiero%20m%C3%A1s%20info%20sobre%20los%20servicios)
+Share on WhatsApp
+WhatsApp Messenger: More than 2 billion people
+          in over 180 countries use WhatsApp to stay in touch with friends and
+          family, anytime and anywhere. WhatsApp is free and offers simple, secure,
+          reliable messaging and calling, available on phones all over the world.
+    <div class="card">
+      <div class="card-inner">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <rect x="2" y="4" width="20" height="14" rx="2"/>
+            <path d="M8 21h8M12 18v3"/>
+          </svg>
+        </div>
+        <h3>TV Digital</h3>
+        <p>Canales nacionales e internacionales en alta definición, cuando quieras.</p>
+        <ul>
+          <li>Grilla completa en HD</li>
+          <li>Señales deportivas, películas y series</li>
+          <li>Compatible con todos tus dispositivos</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="card">
+      <div class="card-inner">
+        <div class="icon-wrap">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <path d="M3 18v-6a9 9 0 0 1 18 0v6"/>
+            <path d="M21 19a2 2 0 0 1-2 2h-1v-6h3v4zM3 19a2 2 0 0 0 2 2h1v-6H3v4z"/>
+          </svg>
+        </div>
+        <h3>Streaming de Radios Online</h3>
+        <p>Miles de radios argentinas y del mundo, en vivo y en la mejor calidad.</p>
+        <ul>
+          <li>Rock, cumbia, noticias, talk shows</li>
+          <li>Reproductor elegante incluido</li>
+          <li>Escuchá desde cualquier dispositivo</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- RADIO PLAYER -->
+<section id="radio">
+  <div class="section-title">
+    <span class="eyebrow">🎧 Radio en vivo</span>
+    <h2>Probá nuestro reproductor</h2>
+    <p>Mientras navegás el sitio, disfrutá de música en vivo. Así de simple, así de bueno.</p>
+  </div>
+
+  <div class="player-section">
+    <div class="player">
+      <div class="cover" id="cover">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <path d="M9 18V5l12-2v13"/>
+          <circle cx="6" cy="18" r="3"/>
+          <circle cx="18" cy="16" r="3"/>
+        </svg>
+      </div>
+
+      <div class="player-info">
+        <div class="station">En vivo · Crack Radio</div>
+        <h3 id="trackName">Groove Salad — SomaFM</h3>
+        <div class="status">
+          <span class="dot" id="statusDot"></span>
+          <span id="statusText">Detenido</span>
+        </div>
+        <div class="visualizer" id="visualizer">
+          <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+          <div class="bar"></div><div class="bar"></div><div class="bar"></div>
+          <div class="bar"></div><div class="bar"></div>
+        </div>
+        <div class="volume">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="#b7bcd6" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+            <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+            <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+          </svg>
+          <input type="range" id="volume" min="0" max="1" step="0.01" value="0.7">
+        </div>
+      </div>
+
+      <button class="play-btn" id="playBtn" aria-label="Reproducir">
+        <svg id="playIcon" viewBox="0 0 24 24" fill="currentColor">
+          <polygon points="6 4 20 12 6 20 6 4"/>
+        </svg>
+      </button>
+    </div>
+    <audio id="audio" preload="none" crossorigin="anonymous">
+      <source src="https://ice1.somafm.com/groovesalad-128-mp3" type="audio/mpeg">
+    </audio>
+  </div>
+</section>
+
+<!-- CTA -->
+<section id="prueba">
+  <div class="cta-box">
+    <span class="eyebrow">💬 ¿Tenés dudas?</span>
+    <h2>No dudes en consultarnos</h2>
+    <p>Solicitá tu <b>prueba gratis</b> y comprobá la calidad de nuestros servicios. Te respondemos al instante por WhatsApp.</p>
+    <div class="cta-row" style="justify-content:center">
+      <a class="btn btn-wa" href="https://wa.me/5491134220329?text=Hola!%20Quiero%20solicitar%20una%20prueba%20gratis" target="_blank" rel="noopener">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.94 11.94 0 0012.04 0C5.5 0 .2 5.3.2 11.84c0 2.09.55 4.13 1.6 5.93L0 24l6.4-1.68a11.86 11.86 0 005.64 1.44h.01c6.54 0 11.84-5.3 11.84-11.84 0-3.16-1.23-6.14-3.37-8.44z"/></svg>
+        Solicitar prueba por WhatsApp
+      </a>
+      <a class="btn btn-ghost" href="tel:+5491134220329">📞 Llamar ahora</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <p>© 2026 <b>Crack En Servicios Online</b> · Todos los derechos reservados</p>
+  <p style="margin-top:6px">Contacto: <a href="https://wa.me/5491134220329" target="_blank">+54 9 11 3422-0329</a></p>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a class="wa-float" href="https://wa.me/5491134220329?text=Hola!%20Quiero%20info%20sobre%20los%20servicios" target="_blank" rel="noopener" aria-label="WhatsApp">
+  <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.52 3.48A11.94 11.94 0 0012.04 0C5.5 0 .2 5.3.2 11.84c0 2.09.55 4.13 1.6 5.93L0 24l6.4-1.68a11.86 11.86 0 005.64 1.44h.01c6.54 0 11.84-5.3 11.84-11.84 0-3.16-1.23-6.14-3.37-8.44zM12.04 21.6h-.01a9.78 9.78 0 01-4.98-1.36l-.36-.21-3.8 1 1.01-3.7-.23-.38a9.8 9.8 0 01-1.5-5.11c0-5.42 4.41-9.83 9.84-9.83 2.63 0 5.1 1.02 6.96 2.88a9.77 9.77 0 012.88 6.96c0 5.42-4.41 9.83-9.81 9.83z"/></svg>
+</a>
+
+<script>
+  const audio = document.getElementById('audio');
+  const playBtn = document.getElementById('playBtn');
+  const playIcon = document.getElementById('playIcon');
+  const cover = document.getElementById('cover');
+  const visualizer = document.getElementById('visualizer');
+  const statusDot = document.getElementById('statusDot');
+  const statusText = document.getElementById('statusText');
+  const volume = document.getElementById('volume');
+
+  audio.volume = 0.7;
+
+  const PLAY_SVG = '<polygon points="6 4 20 12 6 20 6 4"/>';
+  const PAUSE_SVG = '<rect x="6" y="4" width="4" height="16"/><rect x="14" y="4" width="4" height="16"/>';
+
+  function setPlaying(isPlaying){
+    if(isPlaying){
+      playIcon.innerHTML = PAUSE_SVG;
+      cover.classList.add('playing');
+      visualizer.classList.add('active');
+      statusDot.classList.add('live');
+      statusText.textContent = 'En vivo';
+    } else {
+      playIcon.innerHTML = PLAY_SVG;
+      cover.classList.remove('playing');
+      visualizer.classList.remove('active');
+      statusDot.classList.remove('live');
+      statusText.textContent = 'Detenido';
+    }
+  }
+
+  playBtn.addEventListener('click', () => {
+    if(audio.paused){
+      audio.play().then(()=>setPlaying(true)).catch(err=>{
+        statusText.textContent = 'Error al reproducir';
+        console.warn(err);
+      });
+    } else {
+      audio.pause();
+      setPlaying(false);
+    }
+  });
+
+  audio.addEventListener('playing', ()=>setPlaying(true));
+  audio.addEventListener('pause', ()=>setPlaying(false));
+  audio.addEventListener('ended', ()=>setPlaying(false));
+  audio.addEventListener('error', ()=>{
+    statusText.textContent = 'Sin conexión al stream';
+    setPlaying(false);
+  });
+
+  volume.addEventListener('input', e => audio.volume = e.target.value);
+</script>
+
+</body>
+</html>
+
+WhatsApp.com (https://wa.me/5491134220329?text=Hola!%20Quiero%20solicitar%20una%20prueba%20gratis)
+Share on WhatsApp
+WhatsApp Messenger: More than 2 billion people
+          in over 180 countries use WhatsApp to stay in touch with friends and...
